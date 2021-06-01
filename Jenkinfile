@@ -25,7 +25,17 @@ pipeline{
 
 
          echo "Create User Info CSV file .........."
-         sh "run_test.sh"
+         sh '''
+             echo "current directary"
+             echo $HOME
+             pwd
+             ls -la
+
+
+
+
+
+          '''
 
 
          }

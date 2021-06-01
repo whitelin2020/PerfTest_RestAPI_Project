@@ -30,6 +30,7 @@ pipeline{
              echo $HOME
              pwd
              ls -la
+             ./run_test.sh
 
 
 
@@ -61,7 +62,7 @@ pipeline{
          echo "Deploying Performance Project.........."
          }
        }
-       
+
     }
 
 }

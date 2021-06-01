@@ -1,0 +1,41 @@
+pipeline{
+  agent any
+  stages
+  {
+       stage('Build')
+       {
+         steps{
+         echo "Building the Performance Project.........."
+         }
+       }
+       stage('PerformanceTest--Test GET User API Performance')
+       {
+         steps{
+         echo "Test GET User API Performance.........."
+
+
+         }
+       }
+       stage('PerformanceTest--Test Create User API Performance')
+       {
+         steps{
+         echo "Test Create User API Performance(Post Method).........."
+
+
+         }
+       }
+       stage('PerformanceTest--Test Update User API Performance')
+       {
+         steps{
+         echo "Test Update User API Performance(PUT Method).........."
+
+         }
+       }
+       stage('PerformanceTest--Test Delete User API Performance')
+       {
+         steps{
+         echo "Test Delete User API Performance(Delete Method).........."
+
+
+         }
+       }

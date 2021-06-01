@@ -22,14 +22,10 @@ pipeline{
          echo "Test Create User API Performance(Post Method).........."
 
 
-         }
-         steps{
          echo "Create User Info CSV file .........."
 
 
          }
-
-
        }
        stage('PerformanceTest--Test Update User API Performance')
        {

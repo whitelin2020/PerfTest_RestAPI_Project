@@ -21,10 +21,11 @@ pipeline{
        {
          steps{
          echo "Test Create User API Performance(Post Method).........."
-         sh run_test.sh
+
 
 
          echo "Create User Info CSV file .........."
+         sh "run_test.sh"
 
 
          }

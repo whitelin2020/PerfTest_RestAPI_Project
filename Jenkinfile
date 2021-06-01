@@ -12,6 +12,7 @@ pipeline{
        {
          steps{
          echo "Test GET User API Performance.........."
+         python3 test.py
 
 
          }

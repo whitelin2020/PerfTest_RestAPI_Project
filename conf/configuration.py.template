@@ -1,0 +1,44 @@
+#-------------------------------------------------------------------------------
+# Name:        module1
+# Purpose:
+#
+# Author:      jerry lin
+#
+# Created:     
+# Copyright:   (c) jlin 
+# Licence:     <your licence>
+#-------------------------------------------------------------------------------
+# -*- coding: UTF-8 -*-
+
+
+
+import locust.stats
+import os
+import logging
+
+
+
+# default is 1 second
+locust.stats.CSV_STATS_INTERVAL_SEC = 1
+
+# Determines how often the data is flushed to disk, default is 10 seconds
+locust.stats.CSV_STATS_FLUSH_INTERVAL_SEC = 30
+
+#API Token you need to use in post/put/delete request
+API_TOKEN="Bearer <APIToken>"
+
+#Host to accept the  load test request
+HOST="https://gorest.co.in"
+
+# how many new user you want to created
+NUMBER_OF_USER=360
+
+
+BASE_DIR=os.path.dirname(os.path.dirname(__file__))
+DATA_DIR=os.path.join(BASE_DIR,"data")
+
+
+USER_DATA_CSV=os.path.join(DATA_DIR,"test_user_data_prepare.csv")
+USER_DATA_CREATED_CSV=os.path.join(DATA_DIR,"test_user_data_created.csv")
+
+USER_DATA_DELETED_CSV=os.path.join(DATA_DIR,"test_user_data_deleted.csv")

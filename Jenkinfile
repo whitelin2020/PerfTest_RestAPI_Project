@@ -65,7 +65,7 @@ pipeline{
          steps{
          echo "Test Update User API Performance(PUT Method).........."
          sh '''
-         ./run_test.sh
+         ./run_update_user_api.sh
 
          '''
 
@@ -76,7 +76,7 @@ pipeline{
          steps{
          echo "Test Delete User API Performance(Delete Method).........."
          sh '''
-         ./run_test.sh
+         ./run_delete_user_api.sh
 
          '''
 

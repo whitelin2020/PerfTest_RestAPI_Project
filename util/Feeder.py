@@ -4,8 +4,8 @@
 #
 # Author:      jerry lin
 #
-# Created:     
-# Copyright:   (c) jlin 
+# Created:
+# Copyright:   (c) jlin
 # Licence:     <your licence>
 #-------------------------------------------------------------------------------
 # -*- coding: UTF-8 -*-
@@ -103,61 +103,3 @@ class CSVDictWriter(object):
                 print("[CSVDictWriter] CSV File {} has writing error {}".format(self.csv_file, ex))
 
             self.file.close()
-
-
-
-
-
-
-# for test class only
-def main():
-    CSV_PATH="..\\data\\test_user_data.csv"
-    test_data_reader=CSVDictFeeder(CSV_PATH)
-
-    # ------test read_csv_dataFile() method
-    all_test_data=test_data_reader.read_csv_dataFile()
-    # print(len(all_test_data))
-
-    # test_data=all_test_data[:3000]
-    # print(len(test_data))
-    # for k in all_test_data:
-    #     print(k)
-    # print(sys.getsizeof(all_test_data))
-
-
-    # ---- test __next__() method (save memory space) with less time efficicy
-    # print("===csv Dict FileHeader")
-    # for _ in range(3000):
-    #     print(dict(next(test_data_reader)))
-    # print(sys.getsizeof(test_data_reader))
-
-
-    #------
-    # write_csv_data(CSV_PATH,test_data)
-    # read_csv_data(CSV_PATH)
-    csv_reader=CSVFeeder(CSV_PATH)
-
-    #------test read_csv_dataFile() method
-    # all_test_data = csv_reader.read_csv_dataFile()
-    # print(type(csv_reader))
-    # print(len(all_test_data))
-    # for k in all_test_data[:3000]:
-    #     print(k)
-    # print(sys.getsizeof(all_test_data))
-
-    #---- test __next__() method
-    print("===csv Header")
-    cols=next(csv_reader)
-    print(cols)
-    for _ in range(3000):
-        print(dict(zip(cols,next(csv_reader))))
-    print(sys.getsizeof(csv_reader))
-
-
-
-if __name__=="__main__":
-    import time
-    start_time = time.time()
-    main()
-    end_time = time.time()
-    print("This program took  {} second to finish ".format(end_time - start_time))

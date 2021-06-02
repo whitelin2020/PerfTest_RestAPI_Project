@@ -1,11 +1,29 @@
 pipeline{
   agent any
+
+  environment{
+    secret=credentials('API_SECRET')
+
+
+  }
+
   stages
   {
        stage('Build')
        {
          steps{
-         echo "Building the Performance Project.........."
+         echo "Building and Setup the Performance Project.........."
+         sh '''
+         echo "API TOKEN : ${secret}"
+         sed 's/<APIToken>/${secret}/g' conf/configuration.py.template > conf/configuration.py
+
+         grep "API"  conf/configuration.py
+
+
+         '''
+
+
+
          }
        }
        stage('PerformanceTest--Test GET User API Performance')

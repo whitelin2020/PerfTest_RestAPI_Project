@@ -1,4 +1,4 @@
-# PerfTest_RestAPI_Project
+# Restful  API  Performace Test  Project
 
 1. This is a Rest API Performance test Project, we use the https://gorest.co.in/ website as our test site.You need to obtain the API Token to  run this project. You can apply the API Token from https://gorest.co.in/consumer/login.
 
